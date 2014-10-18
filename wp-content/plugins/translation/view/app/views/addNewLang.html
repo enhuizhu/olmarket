@@ -1,0 +1,31 @@
+<div ng-controller="addNewLangCtrl" class="col-xs-9">
+     <div class="panel panel-success">
+         <div class="panel-heading">
+            <h3 class="panel-title">Add New Language</h3>
+         </div>
+         <div class="panel-body">
+              <form role="form" ng-submit="addNewLang()">
+                  <div class="form-group">
+                        <label for="lang">Lang</label>
+                        <input type="text" class="form-control" id="lang" ng-model="lang">
+                  </div>
+                  <div class="form-group">
+                  	    <button class="btn btn-primary" type="submit">Submit</button>
+                  </div>
+              </form>
+         </div>
+     </div>
+
+     <table class="table table-bordered table-hover">
+       <tr>
+           <th>Lang Id</th><th>Lang Value</th><th>delete</th>
+       </tr>
+       <tr ng-repeat="lang in langList">
+           <td>{{lang.lang_id}}</td>
+           <td>{{lang.lang}}</td>
+           <td><button class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+       </tr>
+     <table>
+
+</div>
