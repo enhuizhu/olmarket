@@ -1,0 +1,44 @@
+<div ng-controller="langKeysCtrl" class="col-xs-9">
+	<form role="form" ng-submit="createNewLangKey()">
+       <div class="form-group">
+       	 <label>Please input the lang key</label>
+       	 <input type="text" name="langKey" class="form-control" ng-model="form.langKey"> 
+       </div>
+       <div class="form-group">
+       	 <label>
+            Please input the value of lang key
+       	 </label>
+       	 <input type="text" name="langVal" class="form-control" ng-model="form.langVal">
+       </div>
+
+       <button type="submit" class="btn btn-primary">Crate New Lang Key</button>
+
+	</form>
+
+     <p>&nbsp;</p>
+     <table class="table table-bordered table-hover">
+       <tr>
+           <th>Lang Key Id</th>
+           <th>Lang Key</th>
+           <th>Lang Value</th>
+           <th>Lang Id</th>
+           <th>Delete</th>
+           <th>Update</th>
+       </tr>
+       <tr ng-repeat="key in langKeys">
+           <td>{{key.lang_key_id}}</td>
+           <td>{{key.lang_key}}</td>
+           <td><input ng-model="key.lang_value"></td>
+           <td>{{key.lang_id}}</td>
+           <td><button class="btn btn-danger" ng-click="deleteLangKeyBaseOnKey(key.lang_key_id,key.lang_id)">
+            <span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+           <td>
+             <button class="btn btn-primary" ng-click="updateLangVal(key)">
+              <span class="glyphicon glyphicon-refresh"></span>
+              Update
+             </button>
+           </td>
+       </tr>
+     <table>
+
+</div>

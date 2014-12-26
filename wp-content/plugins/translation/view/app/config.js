@@ -6,5 +6,11 @@ $httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-ur
     when("/addNewLang",{
         templateUrl:viewUrl("views/addNewLang.html"),
         controller:"addNewLangCtrl"	
+    }).when("/langKeyManageMent/:langId",{
+    	templateUrl:viewUrl("views/langKeysManagement.html"),
+    	controller:"langKeysCtrl"
+    }).otherwise({
+    	templateUrl:viewUrl("views/default.html"),
+    	controller:"defaultCtrl"
     });
 }]);

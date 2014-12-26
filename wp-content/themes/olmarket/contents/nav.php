@@ -5,7 +5,8 @@
        </li>
     <?php endforeach;?>
     <li>
-       <span class="flag uk"></span>
-       <span class="flag cn"></span>
+
+       <a href="<?php echo site_url("?lang_select=en")?>" class="flag uk"></a>
+       <a href="<?php echo site_url("?lang_select=cn")?>" class="flag cn"></a>
     </li>
 </ul>

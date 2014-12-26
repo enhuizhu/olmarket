@@ -5,11 +5,7 @@
             <ul class="list-group">
             	<li class="list-group-item list-group-item-warning">
             	  <span class="glyphicon glyphicon-plus"></span>	
-            	    <a href="#/addNewLang">Add New Languages</a>
-            	</li>
-            	<li class="list-group-item list-group-item-warning">
-            		<span class="glyphicon glyphicon-pencil"></span>
-            		Edit or delete language
+            	    <a href="#/addNewLang">Manage Languages</a>
             	</li>
             </ul>
     	</li>
@@ -17,13 +13,9 @@
             <span class="glyphicon glyphicon-list-alt"></span>
             <span>Manage values of keys<p>&nbsp;</p></span>
             <ul class="list-group">
-                 <li class="list-group-item list-group-item-warning">
+                 <li class="list-group-item list-group-item-warning" ng-repeat="lang in langList">
                       <span class="glyphicon glyphicon-flag"></span>
-                      English
-                 </li>
-                 <li class="list-group-item list-group-item-warning">
-                      <span class="glyphicon glyphicon-flag"></span>
-                      Chinese
+                      <a ng-href="#/langKeyManageMent/{{lang.lang_id}}">{{lang.lang}}</a>
                  </li>
             </ul>
         </li>

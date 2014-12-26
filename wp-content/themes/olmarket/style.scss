@@ -65,7 +65,7 @@ a{text-decoration: none;}
 * css for the flag
 **/
 .flag{
-  display: inline-block; 
+  display: inline-block !important; 
   width: 32px; 
   height: 16px;
   background-repeat: no-repeat;

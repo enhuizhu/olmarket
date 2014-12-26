@@ -4,6 +4,26 @@
 **/
 
 /**
+* should start the session if on the page
+* the session not started
+**/
+if (session_status() == PHP_SESSION_NONE) {
+   session_start();
+}
+
+
+
+/**
+* function to check current language
+**/
+if(!function_exists("getCurrentLanguage")){
+  function getCurrentLanguage(){
+    
+  }
+}
+
+
+/**
 * function to load different page template
 **/
 if(!function_exists("getPage")){
@@ -60,13 +80,13 @@ if(!function_exists("isAcitvePage")){
 if(!function_exists("nav")){
 	function nav(){
 		#define the the navigation array
+        global $langs;
         $nav = array(
-           "/" => "HOME",
-           "blog"=>"BLOG",            
-           "about"=>"ABOUT",            
-           "services"=>"SERVICES",            
-           "portfolis"=>"PORTFOLIS",            
-           "contact"=>"CONTACT US"            
+           "/" => $langs["home"],
+           "blog"=>$langs["blog"],            
+           "about"=>$langs["about"],            
+           "services"=>$langs["services"],            
+           "contact"=>$langs["contact_us"]            
         );
         include "contents/nav.php";
 	}
@@ -82,13 +102,3 @@ if(!function_exists("activeClass")){
         }
 	}
 }
-
-
-
-
-
-
-
-
-
-

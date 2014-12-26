@@ -23,7 +23,7 @@
        <tr ng-repeat="lang in langList">
            <td>{{lang.lang_id}}</td>
            <td>{{lang.lang}}</td>
-           <td><button class="btn btn-danger">
+           <td><button class="btn btn-danger" ng-click="deleteLangBaseOnId(lang.lang_id)">
             <span class="glyphicon glyphicon-remove"></span>Delete</button></td>
        </tr>
      <table>

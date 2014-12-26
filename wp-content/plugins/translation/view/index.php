@@ -40,13 +40,18 @@
 <script type="text/javascript" src="<?php echo plugins_url("app/app.js",__FILE__)?>"></script>
 <script type="text/javascript" src="<?php echo plugins_url("app/config.js",__FILE__)?>"></script>
 
+<!-- include all the controllers -->
 <script type="text/javascript" src="<?php echo plugins_url("app/controllers/mainController.js",__FILE__)?>"></script>
 <script type="text/javascript" src="<?php echo plugins_url("app/controllers/addNewLangController.js",__FILE__)?>"></script>
+<script type="text/javascript" src="<?php echo plugins_url("app/controllers/langKeyController.js",__FILE__)?>"></script>
+<script type="text/javascript" src="<?php echo plugins_url("app/controllers/defaultController.js",__FILE__)?>"></script>
 
 <!-- include all the directives here -->
 <script type="text/javascript" src="<?php echo plugins_url("app/directives/menuDirective.js",__FILE__)?>"></script>
 <script type="text/javascript" src="<?php echo plugins_url("app/directives/loadingDirective.js",__FILE__)?>"></script>
 <script type="text/javascript" src="<?php echo plugins_url("app/directives/uiViewDirective.js",__FILE__)?>"></script>
 
-
+<!-- include all the services -->
+<script type="text/javascript" src="<?php echo plugins_url("app/services/errorHandler.js",__FILE__)?>"></script>
+<script type="text/javascript" src="<?php echo plugins_url("app/services/callsApi.js",__FILE__)?>"></script>
 
