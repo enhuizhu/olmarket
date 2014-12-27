@@ -8,7 +8,7 @@
        	 <label>
             Please input the value of lang key
        	 </label>
-       	 <input type="text" name="langVal" class="form-control" ng-model="form.langVal">
+       	 <textarea name="langVal" class="form-control" ng-model="form.langVal"></textarea>
        </div>
 
        <button type="submit" class="btn btn-primary">Crate New Lang Key</button>
@@ -28,7 +28,7 @@
        <tr ng-repeat="key in langKeys">
            <td>{{key.lang_key_id}}</td>
            <td>{{key.lang_key}}</td>
-           <td><input ng-model="key.lang_value"></td>
+           <td><textarea ng-model="key.lang_value"></textarea></td>
            <td>{{key.lang_id}}</td>
            <td><button class="btn btn-danger" ng-click="deleteLangKeyBaseOnKey(key.lang_key_id,key.lang_id)">
             <span class="glyphicon glyphicon-remove"></span>Delete</button></td>

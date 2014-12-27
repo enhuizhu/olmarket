@@ -8,29 +8,29 @@
 <div class="fix-size">
 
     <div class="list-item pull-left">
-         <div class="item-title">DESIGN</div>
+         <div class="item-title"><?php echo $langs["design"]?></div>
          <div class="line"></div>
          <div class="item-description">
            <img src = "<?php bloginfo('template_directory');?>/images/page1-img1.jpg">
-           Lorem ipsum dolor sit amet, consec tetuer adipi scing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.
+           <?php echo $langs["design_content"]?>
          </div>
     </div>
 
      <div class="list-item pull-left equal-margin">
-         <div class="item-title">DEVELOPMENT</div>
+         <div class="item-title"><?php echo $langs["development"]?></div>
          <div class="line"></div>
          <div class="item-description">
            <img src = "<?php bloginfo('template_directory');?>/images/page1-img2.jpg">
-           Lorem ipsum dolor sit amet, consec tetuer adipi scing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.
-         </div>
-    </div>
+           <?php echo $langs["development_content"]?>
+       </div>
+     </div>
 
       <div class="list-item pull-right">
-         <div class="item-title">MARKETING</div>
+         <div class="item-title"><?php echo $langs["marketing"]?></div>
          <div class="line"></div>
          <div class="item-description">
            <img src = "<?php bloginfo('template_directory');?>/images/page1-img3.jpg">
-           Lorem ipsum dolor sit amet, consec tetuer adipi scing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.
+           <?php echo $langs["marketing_content"]?>
          </div>
     </div>
 
@@ -43,8 +43,7 @@
     
      <div class="list-item pull-left long">
         <div class="item-title">
-        	SHOW CASES
-            
+        	<?php echo $langs["show_case"]?>
             <div class="controll-arrows pull-right"> 
             	<span id="carLeft">&lt;</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="carRight">&gt;</span> 
             </div>
@@ -80,7 +79,7 @@
      
 
     <div class="list-item pull-right">
-         <div class="item-title">TESTIMONIAlS</div>
+         <div class="item-title"><?php echo $langs["testimonials"]?></div>
          <div class="line"></div>
          <div class="item-description blockquote">
            <div class="quote"></div>

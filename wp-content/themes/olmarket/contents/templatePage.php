@@ -20,7 +20,7 @@
            <?php
               switch ($pageName) {
                 case '404':
-                  echo "<div class='theme-404'>Sorry, the page you reqeust can not be found!</div>";
+                  echo "<div class='theme-404'>".$langs["404"]."</div>";
                   break;
                 
                 default:

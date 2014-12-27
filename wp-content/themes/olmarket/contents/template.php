@@ -12,7 +12,7 @@
 <div class="fix-size">
     <div class="list-item pull-left">
          <div class="item-title">
-         	 part title
+         	 <?php echo $langs["feature"]?>
          </div>
          <div class="line"></div>
          <div class="item-description">
@@ -23,24 +23,27 @@
 
     <div class="list-item pull-right long">
     	 <div class="item-title">
-    	 	template
+    	 	<?php echo $langs["blog"]?>
     	 </div>
     	 <div class="line"></div>
     	 <div class="item-description">
     	 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-            <h4>Posted on <?php the_time('F jS, Y') ?></h4>
-            <p><?php the_content(__('(more...)')); ?></p>
-            <div>
-             <span><?php edit_post_link(); ?></span>
-            
+            <div class="blog-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
+            <div class="blog-post-date">Posted on <?php the_time('F jS, Y') ?></div>
+            <div class="blog-content">
+                <?php the_content(__('(more...)')); ?>
+            </div>
+             
 
-            </div>
-            <hr> <?php endwhile; ?>
+            <?php endwhile; ?>
             
+            <?php if(!is_home()):?>
             <div class="navigation">
-              <?php previous_post_link('%link') ?> <?php next_post_link(' %link') ?>
+              <span class="pull-left"><?php previous_post_link('%link') ?></span> 
+              <span class="pull-right"><?php next_post_link(' %link') ?></span>
+              </div class="clear"></div>
             </div>
+            <?php endif;?>
            
            <?php else: ?>
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

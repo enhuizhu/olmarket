@@ -28,6 +28,7 @@ if(!function_exists("getCurrentLanguage")){
 **/
 if(!function_exists("getPage")){
 	function getPage($pageName){
+    global $langs;
 		include "contents/templatePage.php";
 	}
 }
