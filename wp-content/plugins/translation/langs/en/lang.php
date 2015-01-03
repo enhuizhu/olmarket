@@ -17,4 +17,13 @@ $langs["404"]="Sorry, the page you reqeust can not be found!";
 $langs["show_case"]="SHOW CASES";
 $langs["testimonials"]="TESTIMONIALS";
 $langs["feature"]="FEATURE";
+$langs["search"]="SEARCH";
+$langs["categories"]="CATEGORIES";
+$langs["archives"]="ARCHIVES";
+$langs["contact_info"]="Contact Info";
+$langs["contact_form"]="Contact Form";
+$langs["your_email"]="Your E-mail";
+$langs["your_name"]="Your Name";
+$langs["your_comment"]="Your Comments";
+$langs["send"]="SEND";
 ?>

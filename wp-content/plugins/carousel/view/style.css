@@ -1,0 +1,23 @@
+/**
+* all the style about carousel will be here
+**/
+
+.lay{
+	position: fixed;
+	width:100%;
+	height: 100%;
+	left: 0px;
+	top:0px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+.pop-up{
+	width: 350px;
+	padding: 20px 5px 1px 5px;
+	position: relative;
+	top: calc(50% - 4px);
+	left: calc(50% - 170px);
+	background: white;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px rgb(13, 11, 11);
+}

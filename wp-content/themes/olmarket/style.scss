@@ -31,6 +31,14 @@ a{
   color:gray;
 }
 
+.error{
+  color:red;
+}
+
+.success{
+  color:green;
+}
+
 .fix-size{
   width: $width;
   margin:0px auto;
@@ -96,6 +104,29 @@ a{
    font-size: $basicFontSize - 1; 
    line-height: 1.6; 
    text-align: justify;
+   .list-wrapper{
+     margin-top: 15px;
+     span:first-child{
+       width:70px;
+     }
+   }
+   .list-wrapper.long{
+      span:first-child{
+        width:150px;
+      }
+      input[type=text],textarea{
+        width: 300px;
+        border-radius: 5px;
+        min-height: 21px;
+        border: solid 1px gray;
+      }
+      textarea{
+        min-height: 107px;
+      }
+      input[type=submit]{
+        margin-left: 406px;
+      }
+   }
    .blog-title{
      font-size: $basicFontSize + 6;
      font-weight: bold;
@@ -163,10 +194,3 @@ footer .copyright{margin-left: 70px}
    font-size: $basicFontSize + 20;
    margin-top: 20px;
 }
-
-
-
-
-
-
-

@@ -84,8 +84,8 @@
          <div class="item-description blockquote">
            <div class="quote"></div>
            <div class="testimonials">
-           Lorem ipsum dolor sit amet, consec tetuer adipi scing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.<br>
-           <div class="pull-right">--michele</div>
+              David-Zhu is a developer with a broad skill set and experience, he truly excels in hard work and getting the job done. He is also able to pick up new technologies in a fast paced environment, personally I really enjoyed the time we worked together.
+           <div class="pull-right">--eddy</div>
            <div class="clear"></div>
 
           </div>

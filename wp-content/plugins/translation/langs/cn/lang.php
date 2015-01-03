@@ -15,4 +15,13 @@ $langs["404"]="很抱歉，您所请求的网页不存在！";
 $langs["show_case"]="成功案例";
 $langs["testimonials"]="客户评价";
 $langs["feature"]="功能例表";
+$langs["search"]="搜索";
+$langs["categories"]="目录";
+$langs["archives"]="存档";
+$langs["contact_info"]="联系方式";
+$langs["contact_form"]="联系表格";
+$langs["your_email"]="您的邮件地址";
+$langs["your_name"]="您的名字";
+$langs["your_comment"]="您的留言";
+$langs["send"]="发送";
 ?>
