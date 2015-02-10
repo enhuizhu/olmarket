@@ -53,26 +53,15 @@
         <div class="show-case">
           <div class="cases-container">
            
+          <?php
+            $carousel = getCarousels();
+            foreach($carousel["carousels"] as $car):
+          ?>
            <div class="case-wraper">
-           	   <img src="<?php bloginfo('template_directory');?>/images/page1-img4.jpg"><br>
-           	   case1
+           	   <img src="<?php echo $carousel["baseUrl"]."/screenshort/".$car->pic_name?>"><br>
+               <?php echo $car->description;?>
            </div>
-           <div class="case-wraper">
-           	   <img src="<?php bloginfo('template_directory');?>/images/page1-img4.jpg"><br>
-           	   case2
-           </div>
-           <div class="case-wraper">
-           	   <img src="<?php bloginfo('template_directory');?>/images/page1-img4.jpg"><br>
-           	   case3
-           </div>
-           <div class="case-wraper">
-           	   <img src="<?php bloginfo('template_directory');?>/images/page1-img4.jpg"><br>
-           	   case4
-           </div>
-          <div class="case-wraper">
-               <img src="<?php bloginfo('template_directory');?>/images/page1-img4.jpg"><br>
-               case5
-           </div>
+         <?php endforeach;?>
         </div>
       </div>
      </div>

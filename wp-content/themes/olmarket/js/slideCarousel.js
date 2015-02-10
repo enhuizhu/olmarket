@@ -20,6 +20,32 @@ jQuery.fn.slideCarousel = function(config){
    container.width(carouselWidth);
    var speed = config.speed || defaultSpeed;
    var auto = config.auto ||  false;
+   var carouselTimeout = null;
+
+   /**
+   * when mouse over the carousel, it should stop automaticly
+   **/
+   container.mouseenter(function(){
+        clearTimeout(carouselTimeout);
+   }).mouseleave(function(){
+         console.log("mouse leave")
+         scrollLeft(true);
+   });
+
+   
+   /**
+   * bind click event to the image
+   **/
+   
+   console.log("the div inside container is:",container.children("div"));
+   
+   var bindClickEvent = function(){
+       container.children("div").unbind("click");
+       container.children("div").bind("click",function(){
+        console.log("div clicked!");
+       }); 
+   }
+
 
    var scrollLeft= function(inside){
    	   jQuery(container.children("div")).each(function(index){
@@ -36,10 +62,11 @@ jQuery.fn.slideCarousel = function(config){
               var firstElement  = container.children("div").get(0);
               jQuery(firstElement).remove();
               container.append(firstElement);
+              bindClickEvent();
         });
         
         if(auto && inside){
-        	setTimeout(function(){
+        	carouselTimeout=setTimeout(function(){
                 scrollLeft(inside);
         	},speed+stayTime);
         }              
@@ -54,6 +81,8 @@ jQuery.fn.slideCarousel = function(config){
           jQuery(lastElement).remove();
           container.prepend(lastElement);
           
+          bindClickEvent();
+
           jQuery(container.children("div")).each(function(){
           	jQuery(this).css({left:-itemWidth+"px"});
           });
@@ -89,6 +118,8 @@ jQuery.fn.slideCarousel = function(config){
    if(auto){
        scrollLeft(true);
    }
+
+   bindClickEvent();
 
    return {
       /**

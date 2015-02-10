@@ -29,3 +29,18 @@ function carousel_admin(){
     global $carouselModel;
     $carouselView->display("index");
 }
+
+/**
+*  function to get all the carousel from datasese
+**/
+
+function getCarousels(){
+     global $carouselModel;
+     $carousels = $carouselModel->getCarouselData();
+     $uploadPath = plugins_url( 'uploads', __FILE__ );
+     
+     return array(
+           "baseUrl"=>$uploadPath,
+           "carousels"=>$carousels
+     	);
+};
