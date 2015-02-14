@@ -59,6 +59,11 @@ jQuery.fn.slideCarousel = function(config){
        * add loading class to the image
        **/
        jQuery(".pic-preview").addClass("loading");
+       /**
+       * remove attr style
+       **/
+       jQuery(".pic-container").removeAttr("style");
+       jQuery(".pic-preview").show();
 
        carouselUrl[imageId] = new Image();
        carouselUrl[imageId].onload = function(){
