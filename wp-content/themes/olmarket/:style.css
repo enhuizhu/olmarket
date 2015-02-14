@@ -24,6 +24,9 @@ a {
 .error {
   color: red; }
 
+.success {
+  color: green; }
+
 .fix-size {
   width: 1024px;
   margin: 0px auto; }
@@ -161,7 +164,8 @@ a {
   width: 166px;
   text-align: center;
   float: left;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .case-wraper img {
   padding-top: 14px;

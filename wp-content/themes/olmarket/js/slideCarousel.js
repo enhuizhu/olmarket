@@ -21,6 +21,15 @@ jQuery.fn.slideCarousel = function(config){
    var speed = config.speed || defaultSpeed;
    var auto = config.auto ||  false;
    var carouselTimeout = null;
+   var winW = jQuery(window).width();
+   var winH = jQuery(window).height();
+   var winRatio = winW/winH;
+   
+   /**
+   * variable to seve the carousel original image path
+   **/
+   var carouselUrl = [];
+
 
    /**
    * when mouse over the carousel, it should stop automaticly
@@ -28,21 +37,96 @@ jQuery.fn.slideCarousel = function(config){
    container.mouseenter(function(){
         clearTimeout(carouselTimeout);
    }).mouseleave(function(){
-         console.log("mouse leave")
          scrollLeft(true);
    });
-
    
+
+   /**
+   * when user click body, should check if user pic-preview already
+   * display
+   **/
+   jQuery(document).click(function(e){
+     if(jQuery(e.target).attr("id")!="carouselOrigin"){
+        jQuery(".pic-preview").hide();
+     }
+   });
+   
+   /**
+   * function to load the new image
+   **/
+   var getOriginalPic = function(imageId, path){
+       /**
+       * add loading class to the image
+       **/
+       jQuery(".pic-preview").addClass("loading");
+
+       carouselUrl[imageId] = new Image();
+       carouselUrl[imageId].onload = function(){
+          /**
+          * should calculate the width of the image and height of the image
+          **/
+          /**
+          * should check if the image need to be scale down
+          **/
+          if(this.width>=winW || this.height>=winH){
+            var ratio = this.width/this.height;
+            /**
+            * width is very bigger, should scale the width
+            **/
+            if(ratio>winRatio){
+               this.width = winW - 100;
+               this.height = this.width / ratio;
+            }else{
+               this.height = winH - 50;
+               this.width = this.height * ratio;
+            }
+          }
+
+          showPic(imageId);
+       }
+       carouselUrl[imageId].src = path;
+   };
+
+   var showPic = function(imageId){
+        /**
+        * should show img and hide the loader
+        **/
+        jQuery(".pic-preview").removeClass("loading");
+        jQuery(".pic-preview").show();
+        jQuery("#carouselOrigin").attr("src",carouselUrl[imageId].src);
+        jQuery("#carouselOrigin").attr("width",carouselUrl[imageId].width);
+        jQuery("#carouselOrigin").attr("height",carouselUrl[imageId].height);
+        /**
+        * reset the position
+        **/
+        jQuery(".pic-container").css({
+           top:"calc(50% - "+carouselUrl[imageId].height/2+"px)",
+           left:"calc(50% - "+carouselUrl[imageId].width/2+"px)"
+        });
+   };
+
+
    /**
    * bind click event to the image
    **/
    
-   console.log("the div inside container is:",container.children("div"));
-   
    var bindClickEvent = function(){
        container.children("div").unbind("click");
-       container.children("div").bind("click",function(){
-        console.log("div clicked!");
+       container.children("div").bind("click",function(e){
+        e.stopPropagation();
+        /**
+        * should get it's id first
+        **/
+        var carouselId = jQuery(this).children("img").attr("data-carid");
+        /**
+        * get original image path
+        **/
+        var originalImage = jQuery(this).children("img").attr("data-origin");
+        if(carouselUrl["pic"+carouselId]==undefined){
+           getOriginalPic("pic"+carouselId,originalImage);
+        }else{
+           showPic("pic"+carouselId);  
+        }
        }); 
    }
 

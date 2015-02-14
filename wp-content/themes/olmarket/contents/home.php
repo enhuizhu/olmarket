@@ -58,7 +58,9 @@
             foreach($carousel["carousels"] as $car):
           ?>
            <div class="case-wraper">
-           	   <img src="<?php echo $carousel["baseUrl"]."/screenshort/".$car->pic_name?>"><br>
+           	   <img src="<?php echo $carousel["baseUrl"]."/screenshort/".$car->pic_name?>" 
+               data-carid="<?php echo $car->carousel_id?>"
+               data-origin="<?php echo $carousel["baseUrl"]."/original/".$car->pic_name?>"><br>
                <?php echo $car->description;?>
            </div>
          <?php endforeach;?>
@@ -83,3 +85,15 @@
     
      <div class="clear"></div>
 </div>
+
+<!-- a container to show loading status and the original image -->
+<div class="pic-preview">
+    <div class="pic-container">
+           <img id="carouselOrigin">
+           <div class="loader">
+                
+           </div>
+    </div>
+
+</div>
+<!-- end container -->
