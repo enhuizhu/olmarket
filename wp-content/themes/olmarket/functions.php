@@ -85,8 +85,8 @@ if(!function_exists("nav")){
         $nav = array(
            "/" => $langs["home"],
            "blog"=>$langs["blog"],            
-           "about"=>$langs["about"],            
-           "services"=>$langs["services"],            
+           // "about"=>$langs["about"],            
+           // "services"=>$langs["services"],            
            "contact"=>$langs["contact_us"]            
         );
         include "contents/nav.php";

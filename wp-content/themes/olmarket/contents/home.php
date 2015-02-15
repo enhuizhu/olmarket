@@ -89,6 +89,7 @@
 <!-- a container to show loading status and the original image -->
 <div class="pic-preview">
     <div class="pic-container">
+           <div class="close-btn">&times;</div>
            <img id="carouselOrigin">
            <div class="loader">
                 

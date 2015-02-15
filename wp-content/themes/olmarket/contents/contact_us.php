@@ -41,6 +41,13 @@
                <div class="clear"></div>
             </div>
 
+             <div class="list-wrapper">
+               <span class="pull-left">Mobile:</span>
+               <span class="pull-left">07411814007</span>
+               <div class="clear"></div>
+            </div>
+
+
          </div>
     </div>
 
