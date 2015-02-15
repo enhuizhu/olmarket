@@ -231,7 +231,7 @@ footer .copyright {
     left: calc(50% - 25px);
     top: calc(50% - 25px);
     position: relative;
-    background-color: white; }
+    background-color: black; }
     .pic-preview .pic-container .close-btn {
       position: absolute;
       right: -9px;
