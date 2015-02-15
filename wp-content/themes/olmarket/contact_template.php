@@ -14,13 +14,13 @@ if(isset($_POST) && !empty($_POST)){
 	}
 
 	if(!isset($contact_error)){
-        $to = $_POST["email"];
+        $to = "zhuen2000@163.com";
         $subject="contact us";
         // To send HTML mail, the Content-type header must be set
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		// Additional headers
-		//$headers .= 'To: developer<zhuen2000@163.com>' . "\r\n";
+		$headers .= 'To: developer<zhuen2000@163.com>' . "\r\n";
 		$headers .= 'From: olmarket <info@olmarket.co.uk>' . "\r\n";
 	    
         $message="<table width='500'>
@@ -38,6 +38,14 @@ if(isset($_POST) && !empty($_POST)){
               </td>
               <td>
                ".$_POST["usercomment"]."
+              </td>
+           </tr>
+           <tr>
+              <td>
+                <strong>User mail:</strong>
+              </td>
+              <td>
+               ".$_POST["email"]."
               </td>
            </tr>
         </table>
