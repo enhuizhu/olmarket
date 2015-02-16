@@ -268,3 +268,5 @@ footer .copyright {
       display: none; }
     .pic-preview.loading .loader {
       display: block; }
+    .pic-preview.loading .close-btn {
+      display: none; }
