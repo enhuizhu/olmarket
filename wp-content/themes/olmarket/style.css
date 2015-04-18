@@ -15,7 +15,8 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #f1f0de;
-  color: #656461; }
+  color: #656461;
+  background-position: center top; }
 
 a {
   text-decoration: none;

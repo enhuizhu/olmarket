@@ -19,11 +19,12 @@ body{
 	background-image:url(images/extra.jpg);
 	background-repeat:no-repeat;
 	background-size: 100% auto;
-    font-size: $basicFontSize;
-    margin: 0px;
-    padding: 0px;
-    background-color: #f1f0de;
-    color:#656461;
+  font-size: $basicFontSize;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f1f0de;
+  color:#656461;
+  background-position: center top;
 }
 
 a{
