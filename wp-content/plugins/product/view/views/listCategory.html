@@ -1,0 +1,33 @@
+<div ng-controller="listCategoryController">
+    <div class="break"></div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Catogory list</div>
+        <table class="table">
+           <tr> 
+            <th>Cateogry Id</th>
+            <th>Cateogry Name</th>
+            <th>Category Priority(Low number have higer priority)</th>
+            <th>Delete</th>
+            <th>Update</th>
+           </tr>
+           <tr ng-repeat="category in categoryList">
+           	 <td>{{category.category_id}}</td>
+           	 <td>
+                 <input type="text" ng-model="category.category_name">
+           	 </td>
+             <td>
+                 <input type="range" ng-model="category.pos" min="0" max="100">
+             </td>
+           	 <td>
+           	 	<span ng-click="delete(category.category_id)" class="btn btn-danger">Delete</span>
+           	 </td>
+             <td>
+             	<span ng-click="update(category.category_id,category.category_name,category.pos)" class="btn btn-primary">
+             		Update
+             	</span>
+             </td>
+           </tr>
+        </table>       
+ 
+    </div>
+</div>

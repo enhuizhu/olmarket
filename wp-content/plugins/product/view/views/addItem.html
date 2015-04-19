@@ -1,0 +1,22 @@
+<div ng-controller="addItemController">
+    <div class="break"></div>
+    <form role="form" ng-submit="addNewItem()">
+        <div class="form-group">
+            <label>Category:</label>
+            <select class="form-control" ng-model="product.cid">
+                <option ng-repeat="category in categoryList" value="{{category.category_id}}">{{category.category_name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+        	<label>Product Name:</label>
+            <input type="text" ng-model="product.name" class="form-control">
+        </div>
+        <div class="form-group">
+        	<label>Product price</label>
+            <input type="text" ng-model="product.price" class="form-control">
+        </div>
+        <div class="form-group">
+        	<input type="submit" value="Create New Product" class="btn btn-primary">
+        </div>	  
+    </form>
+</div>

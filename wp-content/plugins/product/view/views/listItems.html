@@ -1,0 +1,33 @@
+<div ng-controller="listItemsController">
+   <div class="break"></div>
+   <div class="panel panel-default">
+   	  <div class="panel-heading">
+          All products
+   	      &nbsp;&nbsp;
+   	      <input type="text" ng-model="query" placeholder="search">
+   	  </div>
+      <table class="table">
+         <tr>
+         	<th>product id</th>
+         	<th>product name</th>
+         	<th>product price</th>
+         	<th>product category</th>
+         	<th>delete</th>
+         	<th>update</th>
+         </tr>
+         <tr ng-repeat="product in products | filter:query">
+            <td>{{product.product_id}}</td>
+            <td>
+             <input type="text" ng-model="product.product_name"></td>
+            <td>
+             <input type="text" ng-model="product.product_price"> 	
+            </td>
+            <td>{{product.category_name}}</td>
+            <td><span class="btn btn-danger" ng-click="delete(product.product_id)">Delete</span></td>
+            <td><span class="btn btn-primary" ng-click="update(product.product_id,product.product_name,product.product_price)">Update</span></td>         
+         </tr> 	
+         
+
+      </table>
+   </div>
+</div>
