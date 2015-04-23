@@ -18,20 +18,26 @@
 <div class="fix-size">
     <div class="list-item pull-left">
          <div class="item-title">
-         	 <?php echo $langs["contact_info"]?>
+           <?php echo $langs["contact_info"]?>
          </div>
          <div class="line"></div>
          <div class="item-description">
     
             <div class="list-wrapper">
                <span class="pull-left">E-mail:</span>
-               <span class="pull-left">zhuen2000@163.com</span>
+               <span class="pull-left">
+                zhuen2000@163.com<br>
+                danny.c.alex@gmail.com
+               </span>
                <div class="clear"></div>
             </div>
             
             <div class="list-wrapper">
                <span class="pull-left">Skype:</span>
-               <span class="pull-left">david-china-express</span>
+               <span class="pull-left">
+                david-china-express<br>
+                bicomplex
+               </span>
                <div class="clear"></div>
             </div>
 
@@ -43,7 +49,10 @@
 
              <div class="list-wrapper">
                <span class="pull-left">Mobile:</span>
-               <span class="pull-left">07411814007</span>
+               <span class="pull-left">
+                07411814007<br>
+                07565144476
+               </span>
                <div class="clear"></div>
             </div>
 
@@ -52,12 +61,12 @@
     </div>
 
     <div class="list-item pull-right long">
-    	 <div class="item-title">
-    	 	<?php echo $langs["contact_form"]?>
-    	 </div>
-    	 <div class="line"></div>
-    	 <div class="item-description">
-        <div class="list-wrapper long">   	 	
+       <div class="item-title">
+        <?php echo $langs["contact_form"]?>
+       </div>
+       <div class="line"></div>
+       <div class="item-description">
+        <div class="list-wrapper long">       
              <?php 
                if(isset($contact_error)){
                    echo "<span class='error'>$contact_error</span>";
@@ -104,7 +113,7 @@
                 <input type="submit" value="<?php echo $langs["send"]?>">
             </div>
             </form>             
-    	 </div>
+       </div>
     </div>
    
     <div class="clear"></div>
