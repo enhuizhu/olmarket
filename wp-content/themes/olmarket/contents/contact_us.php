@@ -25,13 +25,19 @@
     
             <div class="list-wrapper">
                <span class="pull-left">E-mail:</span>
-               <span class="pull-left">zhuen2000@163.com</span>
+               <span class="pull-left">
+                zhuen2000@163.com<br>
+                danny.c.alex@gmail.com
+               </span>
                <div class="clear"></div>
             </div>
             
             <div class="list-wrapper">
                <span class="pull-left">Skype:</span>
-               <span class="pull-left">david-china-express</span>
+               <span class="pull-left">
+                david-china-express<br>
+                bicomplex
+               </span>
                <div class="clear"></div>
             </div>
 
@@ -43,7 +49,10 @@
 
              <div class="list-wrapper">
                <span class="pull-left">Mobile:</span>
-               <span class="pull-left">07411814007</span>
+               <span class="pull-left">
+                07411814007<br>
+                07565144476
+               </span>
                <div class="clear"></div>
             </div>
 
