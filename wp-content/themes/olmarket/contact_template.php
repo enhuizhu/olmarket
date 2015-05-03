@@ -2,7 +2,6 @@
 /**
 Template Name: Contact
 **/
-
 if(isset($_POST) && !empty($_POST)){
 	/**
 	* should check if user alreay fill all the field

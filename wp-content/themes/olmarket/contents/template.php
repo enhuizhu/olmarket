@@ -2,7 +2,11 @@
  /**
  * This is regular php template file
  **/
+
+die("template here!");
 ?>
+
+
 
 <div class="break"></div>
 <div class="break"></div>
