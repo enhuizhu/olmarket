@@ -271,3 +271,11 @@ footer .copyright {
       display: block; }
     .pic-preview.loading .close-btn {
       display: none; }
+
+.product-wrapper {
+  margin: 20px auto 0px auto;
+  max-width: 940px; }
+  .product-wrapper #reviews h3.comment-reply-title {
+    margin-bottom: 15px; }
+
+/*# sourceMappingURL=style.css.map */

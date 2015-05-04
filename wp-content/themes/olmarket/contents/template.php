@@ -2,8 +2,6 @@
  /**
  * This is regular php template file
  **/
-
-die("template here!");
 ?>
 
 
