@@ -222,6 +222,7 @@ footer .copyright {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
+  z-index: 1000;
   left: 0px;
   top: 0px;
   display: none; }
@@ -271,3 +272,9 @@ footer .copyright {
       display: block; }
     .pic-preview.loading .close-btn {
       display: none; }
+
+.product-wrapper {
+  margin: 20px auto 0px auto;
+  max-width: 940px; }
+  .product-wrapper #reviews h3.comment-reply-title {
+    margin-bottom: 15px; }

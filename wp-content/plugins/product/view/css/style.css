@@ -1,0 +1,41 @@
+/**
+* css for the plugin food menu
+**/
+.break {
+  height: 20px; 
+}
+
+.delete {
+  cursor: pointer;
+  color: red; 
+}
+
+.welcomePage {
+  font-size: 36px;
+  padding-top: 49px;
+  text-align: center;
+  text-shadow: gray 0px 3px 2px; }
+
+.lay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 1000000; }
+
+.lay .loading {
+  display: inline-block;
+  position: relative;
+  top: calc(50% - 10px);
+  border-radius: 3px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.loading span {
+  position: relative;
+  top: 28px;
+  color: white; }

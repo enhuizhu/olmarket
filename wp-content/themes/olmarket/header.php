@@ -3,6 +3,9 @@
 <head>
    <title>Online Marketing Solution</title>
    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory')?>/style.css">
+   <?php
+      wp_head();
+   ?>
 </head>
 <body>
   

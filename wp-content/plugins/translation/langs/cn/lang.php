@@ -24,4 +24,5 @@ $langs["your_email"]="您的邮件地址";
 $langs["your_name"]="您的名字";
 $langs["your_comment"]="您的留言";
 $langs["send"]="发送";
+$langs["products"]="产品";
 ?>
