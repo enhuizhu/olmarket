@@ -222,6 +222,7 @@ footer .copyright {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
+  z-index: 1000;
   left: 0px;
   top: 0px;
   display: none; }
@@ -277,5 +278,3 @@ footer .copyright {
   max-width: 940px; }
   .product-wrapper #reviews h3.comment-reply-title {
     margin-bottom: 15px; }
-
-/*# sourceMappingURL=style.css.map */
