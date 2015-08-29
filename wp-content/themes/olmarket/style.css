@@ -22,53 +22,43 @@ a {
   text-decoration: none;
   color: gray; }
 
+ul {
+  margin-left: -40px;
+  list-style: none; }
+
+.h2, h2 {
+  font-size: initial; }
+
 .error {
   color: red; }
 
 .success {
   color: green; }
 
-.fix-size {
-  width: 1024px;
-  margin: 0px auto; }
-
-.pull-left {
-  float: left; }
-
-.pull-right {
-  float: right; }
-
 .clear {
   clear: both; }
 
 .break {
-  height: 58px; }
+  height: 20px; }
 
 .head-wrapper {
   background-color: black;
-  padding: 6px 0px;
+  padding: 0px 0px;
   margin-top: 22px; }
+  .head-wrapper .navbar-header .navbar-toggle {
+    background-color: white; }
+    .head-wrapper .navbar-header .navbar-toggle .icon-bar {
+      background-color: black; }
+  .head-wrapper .nav li:hover {
+    background-color: transparent; }
+  .head-wrapper .nav li a:hover {
+    background-color: transparent;
+    color: white; }
 
 .logo-wrapper {
-  font-size: 18px;
+  font-size: 17px;
   color: white;
   font-style: italic; }
-
-.nav {
-  position: relative;
-  top: -7px; }
-
-.nav li {
-  float: left;
-  list-style: none; }
-
-.nav a {
-  display: block;
-  color: gray;
-  margin-right: 17px; }
-
-.nav a:hover, .nav a.active {
-  color: white; }
 
 /**
 * css for the flag
@@ -79,27 +69,40 @@ a {
   height: 16px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% auto; }
-
-.flag.uk {
-  background-image: url(images/uk.png);
-  margin-right: 3px; }
-
-.flag.cn {
-  background-image: url(images/cn.png); }
+  background-size: 100% auto;
+  cursor: pointer;
+  margin-left: 16px;
+  padding-top: 46px; }
+  .flag.uk {
+    background-image: url(images/uk.png);
+    margin-right: 3px; }
+  .flag.cn {
+    background-image: url(images/cn.png); }
+  .flag:hover {
+    background-color: transparent; }
 
 .pomotion {
   padding: 60px; }
+  .pomotion img {
+    width: 100%; }
 
 .big-text {
   font-size: 84px;
   color: white; }
 
 .list-item {
-  width: 298px; }
-
-.list-item.equal-margin {
-  margin: 0px 64px; }
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 100%; }
+  .list-item img {
+    max-width: 245px;
+    padding: 24px 0 13px;
+    margin-bottom: 14px;
+    /*width: 100%;*/
+    background: url(images/img-bg.png) no-repeat bottom center;
+    background-size: 100% auto;
+    display: block; }
 
 .item-title {
   font-size: 16px;
@@ -147,17 +150,8 @@ a {
     font-size: 13px;
     margin-bottom: 50px; }
 
-.list-item.long {
-  width: 664px; }
-
-.list-item img {
-  padding: 24px 0 13px;
-  margin-bottom: 14px;
-  background: url(images/img-bg.png) no-repeat bottom center;
-  background-size: 100% auto; }
-
 .show-case {
-  width: 664px;
+  width: 100%;
   overflow: hidden; }
 
 .case-wraper {
@@ -210,9 +204,6 @@ footer {
 .socail-icon-group > span:hover .mask {
   opacity: 0.5; }
 
-footer .copyright {
-  margin-left: 70px; }
-
 .theme-404 {
   font-size: 33px;
   margin-top: 20px; }
@@ -247,6 +238,9 @@ footer .copyright {
       border: solid 1px white;
       font-size: 15px;
       cursor: pointer; }
+      .pic-preview .pic-container .close-btn span {
+        position: relative;
+        top: -3px; }
     .pic-preview .pic-container img {
       max-width: 100%;
       max-height: 100%; }
@@ -272,6 +266,15 @@ footer .copyright {
       display: block; }
     .pic-preview.loading .close-btn {
       display: none; }
+  .pic-preview .glyphicon {
+    position: absolute;
+    font-size: 37px;
+    top: calc(50% - 3px);
+    cursor: pointer; }
+    .pic-preview .glyphicon.glyphicon-chevron-left {
+      left: 20px; }
+    .pic-preview .glyphicon.glyphicon-chevron-right {
+      right: 20px; }
 
 .product-wrapper {
   margin: 20px auto 0px auto;

@@ -8,7 +8,7 @@
 <div class="break"></div>
 <div class="break"></div>
 
-<div class="fix-size">
+<div class="container">
     <div>
          <div class="item-title">
          	 <?php  

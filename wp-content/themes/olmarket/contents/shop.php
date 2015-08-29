@@ -3,8 +3,10 @@
 <div class="break"></div>
 <div class="break"></div>
 
-<div class="fix-size">
-    <div class="list-item pull-left">
+<div class="container">
+    
+   <div class="col-sm-3 col-md-3 col-lg-3">
+    <div class="list-item">
          <div class="item-title">
          	 <?php echo ucfirst(strtolower($langs["categories"]))?>
          </div>
@@ -19,7 +21,10 @@
 
          </div>
     </div>
-    <div class="list-item pull-right long">
+  </div>
+  
+  <div class="col-sm-9 col-md-9 col-lg-9">
+    <div class="list-item">
     	<div class="item-title">
     	 	<?php echo $langs["products"]?>
     	 </div>
@@ -35,5 +40,6 @@
          </div>
       
     </div>
-    <div class="clear"></div>     
+ </div>
+
 </div>

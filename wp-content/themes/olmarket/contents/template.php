@@ -4,15 +4,11 @@
  **/
 ?>
 
+<div class="container">
+    
+    <div class="col-sm-3 col-md-3 col-lg-3">
 
-
-<div class="break"></div>
-<div class="break"></div>
-<div class="break"></div>
-<div class="break"></div>
-
-<div class="fix-size">
-    <div class="list-item pull-left">
+    <div class="list-item">
          <div class="item-title">
          	 <?php echo $langs["feature"]?>
          </div>
@@ -22,8 +18,12 @@
            <?php get_sidebar(); ?>
          </div>
     </div>
+  
+  </div>
+  
+  <div class="col-sm-9 col-md-9 col-lg-9">
 
-    <div class="list-item pull-right long">
+    <div class="list-item pull-right">
     	 <div class="item-title">
     	 	<?php echo $langs["blog"]?>
     	 </div>
@@ -53,6 +53,7 @@
 
     	 </div>
     </div>
+
+</div>
    
-    <div class="clear"></div>
 </div>

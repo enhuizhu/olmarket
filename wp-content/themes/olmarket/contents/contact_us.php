@@ -10,13 +10,9 @@
  **/
 ?>
 
-<div class="break"></div>
-<div class="break"></div>
-<div class="break"></div>
-<div class="break"></div>
-
-<div class="fix-size">
-    <div class="list-item pull-left">
+<div class="container">
+  <div class="col-sm-4 col-md-4 col-lg-4">
+    <div class="list-item">
          <div class="item-title">
            <?php echo $langs["contact_info"]?>
          </div>
@@ -59,8 +55,10 @@
 
          </div>
     </div>
-
-    <div class="list-item pull-right long">
+  </div>
+  
+  <div class="col-sm-8 col-md-8 col-lg-8">
+    <div class="list-item">
        <div class="item-title">
         <?php echo $langs["contact_form"]?>
        </div>
@@ -110,11 +108,11 @@
             </div>
  
             <div class="list-wrapper long">
-                <input type="submit" value="<?php echo $langs["send"]?>">
+                <input type="submit" value="<?php echo $langs["send"]?>" class="btn btn-default">
             </div>
             </form>             
        </div>
     </div>
+   </div>
    
-    <div class="clear"></div>
 </div>

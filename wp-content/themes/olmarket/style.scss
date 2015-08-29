@@ -32,6 +32,15 @@ a{
   color:gray;
 }
 
+ul{
+  margin-left: -40px;
+  list-style: none;
+}
+
+.h2, h2{
+  font-size: initial;
+}
+
 .error{
   color:red;
 }
@@ -40,39 +49,49 @@ a{
   color:green;
 }
 
-.fix-size{
-  width: $width;
-  margin:0px auto;
-}
-
-.pull-left{
-	float: left;
-}
-
-.pull-right{
-	float: right;
-}
 
 .clear{
 	clear: both;
 }
 
-.break{height: 58px;}
+.break{
+  height: 20px;
+}
+
 .head-wrapper{
 	background-color:$black;
-	padding: 6px 0px;
-	margin-top: 22px
+	padding: 0px 0px;
+	margin-top: 22px;
+  .navbar-header{
+    .navbar-toggle{
+       background-color: $white;
+       .icon-bar{
+          background-color: $black;
+       }
+    }
+  }
+
+  .nav{
+    li{
+      &:hover{
+        background-color:transparent;
+      }
+      a{
+        &:hover{
+          background-color:transparent;
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
 .logo-wrapper{
-   font-size: $basicFontSize + 5;
+   font-size: $basicFontSize + 4;
    color:$white;
    font-style: italic; 
 }
-.nav{position: relative; top:-7px;}
-.nav li{float:left; list-style: none;}
-.nav a{display: block; color:$gray; margin-right: 17px;}
-.nav a:hover,.nav a.active{color:$white;}
+
 /**
 * css for the flag
 **/
@@ -82,21 +101,47 @@ a{
   height: 16px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size:100% auto; 
-}
-.flag.uk{
-  background-image: url(images/uk.png);
-  margin-right: 3px;
-}
-.flag.cn{
-  background-image: url(images/cn.png);
-}
+  background-size:100% auto;
+  cursor: pointer;
+  margin-left: 16px;
+  padding-top: 46px;
+  &.uk{
+     background-image: url(images/uk.png);
+     margin-right: 3px;
+  }
+  &.cn{
+      background-image: url(images/cn.png);
+  }
 
+  &:hover{
+     background-color: transparent;
+  }
+}
  
-.pomotion{padding: $basicFontSize + 47;}
+.pomotion{
+  padding: $basicFontSize + 47;
+  img{
+    width: 100%;
+  }
+}
 .big-text{font-size: $basicFontSize + 71; color: $white;}
-.list-item{width: 298px;}
-.list-item.equal-margin{margin:0px 64px;}
+.list-item{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 100%;
+  
+  img{
+    max-width: 245px;
+    padding: 24px 0 13px;
+    margin-bottom: 14px; 
+    /*width: 100%;*/
+    background: url(images/img-bg.png) no-repeat bottom center;
+    background-size: 100% auto;
+    display: block;
+  }
+ }
+
 .item-title{font-size: $basicFontSize + 3; padding-bottom: 10px;}
 .controll-arrows{color:rgba(155,155,155,0.5); margin-right: 13px;}
 .controll-arrows span{cursor: pointer;}
@@ -144,13 +189,15 @@ a{
      margin-bottom: 50px;
    }
 }
-.list-item.long{width: 664px;}
-.list-item img{padding: 24px 0 13px;
-margin-bottom: 14px; background: url(images/img-bg.png) no-repeat bottom center; background-size: 100% auto;}
-.show-case{width: 664px; overflow: hidden;}
+.show-case{
+  width:100%; 
+  overflow: hidden;
+}
+
 .case-container{
 
 }
+
 .case-wraper{display:inline-block; width: 166px; text-align: center; float:left; position: relative;cursor: pointer;}
 .case-wraper img{padding-top: 14px; margin-bottom: 1px; padding-bottom: 7px;}
 .blockquote{padding: 14px; background-color: rgba(99,99,99,0.1); margin-top:14px;}
@@ -190,7 +237,6 @@ footer{
 	opacity: 0.5;
 }
 
-footer .copyright{margin-left: 70px}
 .theme-404{
    font-size: $basicFontSize + 20;
    margin-top: 20px;
@@ -226,6 +272,10 @@ footer .copyright{margin-left: 70px}
       border: solid 1px white;
       font-size: 15px;
       cursor: pointer;
+      span{
+        position: relative;
+        top: -3px;
+      }
     }
     img{
       max-width: 100%;
@@ -262,6 +312,21 @@ footer .copyright{margin-left: 70px}
       display: none;
     }
   }
+
+  .glyphicon{
+     $margin: 20px;
+     position: absolute;
+     font-size: 37px;
+     top: calc(50% - 3px);
+     cursor: pointer;
+     &.glyphicon-chevron-left{
+       left: $margin;
+     }
+     &.glyphicon-chevron-right{
+       right: $margin;
+     }
+  }
+
 }
 
 .product-wrapper{
@@ -271,3 +336,4 @@ footer .copyright{margin-left: 70px}
       margin-bottom: 15px;
     }
 }
+

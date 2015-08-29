@@ -1,31 +1,34 @@
 <div class="break"></div>
-<div class="fix-size">
+<div class="container">
   <div class="line"></div>
-  <footer>
-     
-     <label>social</label>
-     <span class="socail-icon-group">
-          <span>
-            <img src="<?php bloginfo('template_directory');?>/images/facebook.png">
-            <div class="mask"></div>
-          </span>
-          <span>
-            <img src="<?php bloginfo('template_directory');?>/images/twitter.png">
-            <div class="mask"></div>
-          </span>
-          <span>
-            <img src="<?php bloginfo('template_directory');?>/images/linkedin.png">
-            <div class="mask"></div>
-          </span>
-     </span> 
-
+  <footer class="row">
+     <div class="col-sm-4 col-md-4 col-lg-4">
+       <label>social</label>
+       <span class="socail-icon-group">
+            <span>
+              <img src="<?php bloginfo('template_directory');?>/images/facebook.png">
+              <div class="mask"></div>
+            </span>
+            <span>
+              <img src="<?php bloginfo('template_directory');?>/images/twitter.png">
+              <div class="mask"></div>
+            </span>
+            <span>
+              <img src="<?php bloginfo('template_directory');?>/images/linkedin.png">
+              <div class="mask"></div>
+            </span>
+       </span> 
+   </div>
+   <div class="col-sm-8 col-md-8 col-lg-8">
      <label class="copyright">copyright &copy; online marketing solution 2014</label>
-
+   </div>
   </footer>
 </div>
 
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/slideCarousel.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/main.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
 

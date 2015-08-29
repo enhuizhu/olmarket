@@ -21,9 +21,8 @@ jQuery.fn.slideCarousel = function(config){
    var speed = config.speed || defaultSpeed;
    var auto = config.auto ||  false;
    var carouselTimeout = null;
-   var winW = jQuery(window).width();
-   var winH = jQuery(window).height();
-   var winRatio = winW/winH;
+   var currentIndex = 0;
+
    
    /**
    * variable to seve the carousel original image path
@@ -47,6 +46,27 @@ jQuery.fn.slideCarousel = function(config){
    **/
    jQuery(document).click(function(e){
      if(jQuery(e.target).attr("id")!="carouselOrigin"){
+        if(jQuery(e.target).hasClass("glyphicon")){
+          if (jQuery(e.target).hasClass("glyphicon-chevron-right")) {
+              currentIndex = (currentIndex + 1) % slidNumber;
+          };
+
+          if (jQuery(e.target).hasClass("glyphicon-chevron-left")) {
+              currentIndex = (currentIndex - 1)% slidNumber;
+              if (currentIndex < 0) {
+                  currentIndex = slidNumber -1;
+              };
+          };
+
+          var img = container.find("[data-index="+ currentIndex +"]");
+          var imageId = img.attr("data-carid");
+          var path = img.attr("data-origin");
+
+          getOriginalPic(imageId, path);
+
+          return false;
+        }
+
         jQuery(".pic-preview").hide();
      }
    });
@@ -55,6 +75,9 @@ jQuery.fn.slideCarousel = function(config){
    * function to load the new image
    **/
    var getOriginalPic = function(imageId, path){
+       var winW = jQuery(window).width();
+       var winH = jQuery(window).height();
+       var winRatio = winW/winH;
        /**
        * add loading class to the image
        **/
@@ -127,6 +150,8 @@ jQuery.fn.slideCarousel = function(config){
         * get original image path
         **/
         var originalImage = jQuery(this).children("img").attr("data-origin");
+        currentIndex = jQuery(this).children("img").attr("data-index");
+        
         if(carouselUrl["pic"+carouselId]==undefined){
            getOriginalPic("pic"+carouselId,originalImage);
         }else{

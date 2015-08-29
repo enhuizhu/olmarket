@@ -1,22 +1,18 @@
- <div class="pomotion fix-size">
-    
-        <div class="big-text">WE MAKE WEBSITES .</div>
- 
- </div> 
-
-
-<div class="fix-size">
-
-    <div class="list-item pull-left">
-         <div class="item-title"><?php echo $langs["design"]?></div>
-         <div class="line"></div>
-         <div class="item-description">
-           <img src = "<?php bloginfo('template_directory');?>/images/page1-img1.jpg">
-           <?php echo $langs["design_content"]?>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+         <div class="list-item">
+           <div class="item-title"><?php echo $langs["design"]?></div>
+           <div class="line"></div>
+           <div class="item-description">
+             <img src = "<?php bloginfo('template_directory');?>/images/page1-img1.jpg">
+             <?php echo $langs["design_content"]?>
+           </div>
          </div>
     </div>
-
-     <div class="list-item pull-left equal-margin">
+    
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+     <div class="list-item">
          <div class="item-title"><?php echo $langs["development"]?></div>
          <div class="line"></div>
          <div class="item-description">
@@ -24,24 +20,28 @@
            <?php echo $langs["development_content"]?>
        </div>
      </div>
+    </div>
 
-      <div class="list-item pull-right">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+      <div class="list-item">
          <div class="item-title"><?php echo $langs["marketing"]?></div>
          <div class="line"></div>
          <div class="item-description">
            <img src = "<?php bloginfo('template_directory');?>/images/page1-img3.jpg">
            <?php echo $langs["marketing_content"]?>
          </div>
+      </div>
     </div>
 
-    <div class="clear"></div>
+  </div>
+    
 
 </div>
 
 <div class="break"></div>
-<div class="fix-size">
-    
-     <div class="list-item pull-left long">
+<div class="container">
+    <div class="col-md-8 col-sm-8 col-lg-8">
+     <div class="list-item">
         <div class="item-title">
         	<?php echo $langs["show_case"]?>
             <div class="controll-arrows pull-right"> 
@@ -55,21 +55,24 @@
            
           <?php
             $carousel = getCarousels();
-            foreach($carousel["carousels"] as $car):
+            foreach($carousel["carousels"] as $k => $car):
           ?>
            <div class="case-wraper">
            	   <img src="<?php echo $carousel["baseUrl"]."/screenshort/".$car->pic_name?>" 
                data-carid="<?php echo $car->carousel_id?>"
-               data-origin="<?php echo $carousel["baseUrl"]."/original/".$car->pic_name?>"><br>
+               data-origin="<?php echo $carousel["baseUrl"]."/original/".$car->pic_name?>"
+               data-index="<?php echo $k;?>"
+               ><br>
                <?php echo $car->description;?>
            </div>
          <?php endforeach;?>
         </div>
       </div>
      </div>
-     
-
-    <div class="list-item pull-right">
+    </div> 
+    
+    <div class="col-sm-4 col-md-4 col-lg-4">
+     <div class="list-item">
          <div class="item-title"><?php echo $langs["testimonials"]?></div>
          <div class="line"></div>
          <div class="item-description blockquote">
@@ -82,19 +85,22 @@
           </div>
         </div>
     </div>
+
+   </div>
     
-     <div class="clear"></div>
 </div>
 
 <!-- a container to show loading status and the original image -->
 <div class="pic-preview">
     <div class="pic-container">
-           <div class="close-btn">&times;</div>
+           <div class="close-btn"><span>&times;</span></div>
            <img id="carouselOrigin">
            <div class="loader">
                 
            </div>
     </div>
 
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="glyphicon glyphicon-chevron-right"></span>
 </div>
 <!-- end container -->
