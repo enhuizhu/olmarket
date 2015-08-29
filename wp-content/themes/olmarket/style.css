@@ -133,7 +133,8 @@ ul {
     width: 300px;
     border-radius: 5px;
     min-height: 21px;
-    border: solid 1px gray; }
+    border: solid 1px gray;
+    max-width: 80%; }
   .item-description .list-wrapper.long textarea {
     min-height: 107px; }
   .item-description .list-wrapper.long input[type=submit] {
