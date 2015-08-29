@@ -229,18 +229,19 @@ footer {
       position: absolute;
       right: -9px;
       top: -7px;
-      width: 20px;
-      height: 20px;
+      width: 40px;
+      height: 40px;
       background: black;
       color: white;
-      border-radius: 11px;
+      border-radius: 50%;
       text-align: center;
       border: solid 1px white;
       font-size: 15px;
       cursor: pointer; }
       .pic-preview .pic-container .close-btn span {
         position: relative;
-        top: -3px; }
+        top: -3px;
+        font-size: 27px; }
     .pic-preview .pic-container img {
       max-width: 100%;
       max-height: 100%; }
