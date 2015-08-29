@@ -82,6 +82,7 @@ if(!function_exists("nav")){
 	function nav(){
 		#define the the navigation array
         global $langs;
+        // die(var_dump($langs));
         $nav = array(
            "/" => $langs["home"],
            "blog"=>$langs["blog"],            

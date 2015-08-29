@@ -5,6 +5,6 @@
     <?php endforeach;?>
     <li>
        <span onclick ='location.href="<?php echo site_url("?lang_select=en")?>"' class="flag uk"></span>
-       <span onclick='location.href="<?php echo site_url("?lang_select=en")?>"' class="flag cn"></span>
+       <span onclick='location.href="<?php echo site_url("?lang_select=cn")?>"' class="flag cn"></span>
     </li>
     

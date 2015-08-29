@@ -17,8 +17,8 @@ getCurrentLang();
 
 #include related lang file
 include "langs/".$_SESSION["current_lang"]."/lang.php";
-//die(var_dump($langs));
-//die(var_dump($_SESSION["current_lang"]));
+// die(var_dump($langs));
+// die(var_dump($_SESSION["current_lang"]));
 
 $myModel = new dataModel();
 $myView = new view();
