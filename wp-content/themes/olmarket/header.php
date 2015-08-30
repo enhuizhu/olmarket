@@ -36,40 +36,11 @@
                <?php
                   nav();
                ?>
-               <!-- <li class="active">
-                <a href="#">Link <span class="sr-only">(current)</span></a>
-               </li>
-               <li>
-                <a href="#">Link</a>
-               </li>
-               <li>
-                <a href="#">Link</a>
-               </li>
-               <li>
-                <a href="#">Link</a>
-               </li> -->
          </ul>
       </div>
-
-<!--       <div class="row">
-          
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <div class="logo-wrapper">
-                   Online Marketing Solution
-              </div>
-          </div>
-          
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div class="nav">
-                      <?php nav();?>
-                      <div class="clear"></div>
-                </div>
-          </div>
-      </div>
- -->     </div>
+    </div>
   </div>
 
    <div class="pomotion container">
         <img src="<?php bloginfo('template_directory');?>/images/we_make_websites.png">
-        <!-- <div class="big-text">WE MAKE WEBSITES .</div> -->
  </div> 

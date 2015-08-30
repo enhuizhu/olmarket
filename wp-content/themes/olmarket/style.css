@@ -137,8 +137,6 @@ ul {
     max-width: 80%; }
   .item-description .list-wrapper.long textarea {
     min-height: 107px; }
-  .item-description .list-wrapper.long input[type=submit] {
-    margin-left: 406px; }
   .item-description .blog-title {
     font-size: 19px;
     font-weight: bold;
