@@ -6,6 +6,9 @@ Author URI: http://www.olmarket.co.uk/
 Description: wordpress theme used for olmarket website.
 Version: 1.0
 */
+html {
+  overflow-x: hidden; }
+
 body {
   font-family: Verdana, Geneva, sans-serif;
   background-image: url(images/extra.jpg);
@@ -16,7 +19,8 @@ body {
   padding: 0px;
   background-color: #f1f0de;
   color: #656461;
-  background-position: center top; }
+  background-position: center top;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none;
