@@ -6,6 +6,8 @@ Author URI: http://www.olmarket.co.uk/
 Description: wordpress theme used for olmarket website.
 Version: 1.0
 */
+@import url(css/bootstrap.min.css);
+@import url(css/bootstrap.theme.css);
 html {
   overflow-x: hidden; }
 
@@ -150,8 +152,14 @@ ul {
   .item-description .blog-post-date {
     font-size: 11px; }
   .item-description .blog-content {
-    font-size: 13px;
-    margin-bottom: 50px; }
+    font-size: 12px;
+    margin-bottom: 50px;
+    padding-top: 10px; }
+    .item-description .blog-content img {
+      margin-right: 26px; }
+    .item-description .blog-content.single img {
+      max-width: 100%;
+      width: auto; }
 
 .show-case {
   width: 100%;
@@ -285,3 +293,23 @@ footer {
   max-width: 940px; }
   .product-wrapper #reviews h3.comment-reply-title {
     margin-bottom: 15px; }
+
+.ui-tree {
+  margin-top: 7px; }
+  .ui-tree .operator {
+    cursor: pointer; }
+    .ui-tree .operator:before {
+      content: "+"; }
+  .ui-tree ul {
+    margin-left: 4px;
+    border-left: solid 1px;
+    line-height: 2;
+    display: none; }
+    .ui-tree ul li {
+      margin-left: -41px; }
+      .ui-tree ul li:before {
+        content: "--  "; }
+  .ui-tree.expand .operator:before {
+    content: "-"; }
+  .ui-tree.expand ul {
+    display: block; }

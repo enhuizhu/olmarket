@@ -7,15 +7,14 @@
        <span class="socail-icon-group">
             <span>
               <img src="<?php bloginfo('template_directory');?>/images/facebook.png">
-              <div class="mask"></div>
             </span>
             <span>
               <img src="<?php bloginfo('template_directory');?>/images/twitter.png">
-              <div class="mask"></div>
             </span>
             <span>
-              <img src="<?php bloginfo('template_directory');?>/images/linkedin.png">
-              <div class="mask"></div>
+              <a href="https://uk.linkedin.com/pub/zhu-enhui/35/662/505" target="_blank">
+                <img src="<?php bloginfo('template_directory');?>/images/linkedin.png">
+              </a>
             </span>
        </span> 
    </div>
@@ -28,8 +27,7 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/slideCarousel.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/main.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="<?php bloginfo('template_directory');?>/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

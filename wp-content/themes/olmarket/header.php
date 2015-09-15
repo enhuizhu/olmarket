@@ -3,11 +3,6 @@
 <head>
    <title>Online Marketing Solution</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-   <!-- Optional theme -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory')?>/style.css">
    <?php
       wp_head();
@@ -17,7 +12,7 @@
   
   <div class="head-wrapper">
      <div class="container"> 
-      <div class="navbar-header">
+      <div class="navbar-header col-lg-5 col-md-5 col-sm-5">
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -31,7 +26,7 @@
           </a>
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse col-lg-7 col-md-7 col-sm-7" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
                <?php
                   nav();

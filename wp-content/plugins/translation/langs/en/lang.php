@@ -26,6 +26,6 @@ $langs["your_email"]="Your E-mail";
 $langs["your_name"]="Your Name";
 $langs["your_comment"]="Your Comments";
 $langs["send"]="SEND";
-$langs["product_list"]="Product List";
-$langs["product_list"]="Product List";
+$langs["products"]="Products";
+$langs["portfolios"]="portfolios";
 ?>

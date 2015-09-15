@@ -85,7 +85,8 @@ if(!function_exists("nav")){
         // die(var_dump($langs));
         $nav = array(
            "/" => $langs["home"],
-           "blog"=>$langs["blog"],            
+           "blog"=> $langs["blog"],
+           "portfolios" => $langs["portfolios"],            
            // "about"=>$langs["about"],            
            // "services"=>$langs["services"],            
            "contact"=>$langs["contact_us"]            
@@ -104,6 +105,55 @@ if(!function_exists("activeClass")){
         }
 	}
 }
+
+
+/**
+* function to get portfolio side bar
+**/
+if (!function_exists("getPortfolioSideBar")) {
+   function getPortfolioSideBar(){
+     /**
+     * This is regular php template file
+     **/
+      $portfolios = array();
+
+      $type = 'portfolio';
+      $args=array(
+        'post_type' => $type,
+        'post_status' => 'publish',
+        // 'posts_per_page' => 10,
+        'caller_get_posts'=> 1
+      );
+
+      $my_query = null;
+      $my_query = new WP_Query($args);
+      if( $my_query->have_posts() ) {
+        while ($my_query->have_posts()) {
+            $my_query->the_post();
+            $category = get_the_category()[0]->name;
+
+            if (!isset($portfolios[$category])) {
+                $portfolios[$category] = array();  
+            }
+
+            array_push($portfolios[$category], array(
+                "title" => get_the_title(),
+                "date" => get_the_date(),
+                "content" => get_the_content(),
+                "link" => get_the_permalink()
+            ));
+        }
+      }
+
+      wp_reset_query();  // Restore global post data stomped by the_post().
+
+      return $portfolios;
+
+   }
+}
+
+
+
 
 /**
 * function to generate the category

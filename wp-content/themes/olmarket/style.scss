@@ -7,6 +7,10 @@ Description: wordpress theme used for olmarket website.
 Version: 1.0
 */
 
+@import "css/bootstrap.min.css";
+@import "css/bootstrap.theme.css";
+
+
 
 $basicFontSize:13px;
 $white:white;
@@ -188,8 +192,21 @@ ul{
    }
 
    .blog-content{
-     font-size: $basicFontSize;
+     font-size: $basicFontSize - 1;
      margin-bottom: 50px;
+     padding-top: 10px; 
+
+     img{
+        margin-right: 26px;
+     }
+
+     &.single{
+       img{
+          max-width: 100%;
+          width: auto;
+       }
+     }
+
    }
 }
 .show-case{
@@ -339,5 +356,40 @@ footer{
     #reviews h3.comment-reply-title{
       margin-bottom: 15px;
     }
+}
+
+.ui-tree{
+   margin-top: 7px;
+   .operator{
+      cursor: pointer;
+      &:before{
+        content:"+";
+      }
+   }
+
+   ul{
+      margin-left: 4px;
+      border-left: solid 1px;
+      line-height: 2;
+      display: none;
+      li{
+        margin-left: -41px;
+        &:before{
+          content:"--  ";
+        }
+      }
+   }
+
+   &.expand{
+      .operator{ 
+        &:before{
+          content:"-";
+        }
+      }
+      ul{
+        display: block;
+      }
+   }
+
 }
 
