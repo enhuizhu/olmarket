@@ -148,7 +148,8 @@ ul {
     font-weight: bold;
     margin-top: 14px;
     margin-bottom: 14px;
-    border-bottom: dotted 1px; }
+    border-bottom: dotted 1px;
+    clear: both; }
   .item-description .blog-post-date {
     font-size: 11px; }
   .item-description .blog-content {
