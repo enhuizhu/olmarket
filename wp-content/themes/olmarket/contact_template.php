@@ -13,7 +13,7 @@ if(isset($_POST) && !empty($_POST)){
 	}
 
 	if(!isset($contact_error)){
-        $to = "zhuen2000@163.com";
+        $to = "sunlilyy@gmail.com";
         $subject="contact us";
         // To send HTML mail, the Content-type header must be set
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
