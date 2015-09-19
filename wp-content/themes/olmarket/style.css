@@ -199,7 +199,8 @@ footer {
 .socail-icon-group {
   top: 3px;
   position: relative;
-  margin-left: 8px; }
+  margin-left: 8px;
+  vertical-align: super; }
 
 .socail-icon-group > span {
   position: relative; }
@@ -314,3 +315,7 @@ footer {
     content: "-"; }
   .ui-tree.expand ul {
     display: block; }
+
+@media (max-width: 320px) {
+  .logo-wrapper {
+    font-size: 15px; } }

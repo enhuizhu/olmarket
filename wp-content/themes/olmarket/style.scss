@@ -238,8 +238,9 @@ footer{
 
 .socail-icon-group{
 	top: 3px;
-    position: relative;
-    margin-left: 8px;
+  position: relative;
+  margin-left: 8px;
+  vertical-align: super;
 }
 
 .socail-icon-group > span {
@@ -392,5 +393,11 @@ footer{
       }
    }
 
+}
+
+@media (max-width: 320px){
+    .logo-wrapper{
+      font-size: 15px;
+    }
 }
 
