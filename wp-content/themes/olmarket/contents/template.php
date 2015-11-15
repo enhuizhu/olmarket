@@ -29,10 +29,9 @@
     	 </div>
     	 <div class="line"></div>
     	 <div class="item-description">
-    	 	
-        <?php 
+        <?php
+        $cat = get_query_var('cat');
         $post_id = get_the_ID();
-
         $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1  ;
         $perPageRange = 5;
 
@@ -43,21 +42,21 @@
             'page' => $paged
           );
 
+        if (!empty($cat)) {
+           $query_args["cat"] = $cat;
+        }
+
         if (!is_home() && !is_category()) {
            $query_args["p"] = $post_id;
         }
 
         $the_query = new WP_Query( $query_args ); 
-
         ?>
-
 
         <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <div class="blog-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
             <div class="blog-post-date">Posted on <?php the_time('F jS, Y') ?></div>
             <div class="blog-content">
-                                   
-
                 <?php 
                     $content = get_the_content(__('(more...)')); 
                     
