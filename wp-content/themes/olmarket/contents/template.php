@@ -43,7 +43,7 @@
             'page' => $paged
           );
 
-        if (!is_home()) {
+        if (!is_home() && !is_category()) {
            $query_args["p"] = $post_id;
         }
 
@@ -56,13 +56,12 @@
             <div class="blog-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
             <div class="blog-post-date">Posted on <?php the_time('F jS, Y') ?></div>
             <div class="blog-content">
-                 
+                                   
 
                 <?php 
-
                     $content = get_the_content(__('(more...)')); 
                     
-                    if (is_home()) {
+                    if (is_home() || is_category()) {
                         echo brifContent($content);
                     }else{
                         the_content(_('(more...)'));
@@ -78,7 +77,7 @@
             
             <?php wp_reset_postdata(); ?>            
 
-            <?php if(!is_home()):?>
+            <?php if(!is_home() && !is_category()):?>
             
             <div class="navigation">
               <span class="pull-left"><?php previous_post_link('%link') ?></span> 
